@@ -17,7 +17,7 @@ const Login = () => {
   useEffect(() => {
     // Clear any previous user data on mount
     // localStorage.removeItem("user");
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("user");
     if (token) {
       // If a token exists, redirect to dashboard
       navigate("/dashboard");
@@ -29,7 +29,7 @@ const Login = () => {
   setErrorMsg("");
 
   const form = new URLSearchParams();
-  form.append("username", email);  // Not "email"
+  form.append("username", email);
   form.append("password", password);
 
   try {

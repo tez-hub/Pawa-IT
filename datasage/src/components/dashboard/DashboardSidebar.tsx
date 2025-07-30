@@ -63,6 +63,11 @@ export const DashboardSidebar = ({ onFileSelect, selectedFile }: DashboardSideba
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.href = "/login"; // Redirect to login page
+  };
+
 
   // const handleFileUpload = (file: any) => {
   //   const newFile = {
@@ -145,9 +150,9 @@ export const DashboardSidebar = ({ onFileSelect, selectedFile }: DashboardSideba
               <p className="text-xs text-muted-foreground">
                 Upload CSV, Excel, or PDF files and ask questions in natural language to get instant insights.
               </p>
-              <Button variant="outline" size="sm" className="w-full">
-                <Settings className="h-4 w-4 mr-2" />
-                Settings
+              <Button onClick={handleLogout} variant="outline" size="sm" className="w-full">
+                {/* <Settings className="h-4 w-4 mr-2" /> */}
+                Logout
               </Button>
             </div>
           </Card>

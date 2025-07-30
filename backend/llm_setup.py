@@ -2,12 +2,14 @@
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_gemini_chain():
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",
         google_api_key=os.getenv("GOOGLE_API_KEY")
-       
     )
 
     prompt = ChatPromptTemplate.from_template("""
