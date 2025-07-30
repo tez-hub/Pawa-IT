@@ -48,3 +48,28 @@ uvicorn main:app --reload
 
 ```
 
+The backend will be running at: http://127.0.0.1:8000
+
+
+### Frontend Setup (React + Vite)
+
+1. Navigate to the frontend directory:
+
+```bash
+cd datasage
+```
+
+2. Install dependancies
+
+```bash
+npm install
+```
+
+3. Start the development server
+
+```bash
+
+npm run dev
+```
+
+The frontend will be available at: http://localhost:3000
