@@ -1,0 +1,5 @@
+name,category,buyingPrice,sellingPrice,stock,minStock
+Coca Cola,Drinks,30,50,100,10
+Fanta,Drinks,28,48,80,10
+Bread,Bakery,40,60,50,5
+Milk,Dairy,45,65,60,8

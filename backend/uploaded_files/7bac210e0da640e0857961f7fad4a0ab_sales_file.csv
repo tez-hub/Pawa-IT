@@ -1,0 +1,11 @@
+Date,Product,Category,Price,Quantity,Total,Region
+2025-07-01,Laptop,Electronics,800,2,1600,North
+2025-07-02,Phone,Electronics,500,3,1500,South
+2025-07-03,Tablet,Electronics,300,1,300,East
+2025-07-04,Desk,Furniture,200,1,200,West
+2025-07-05,Chair,Furniture,100,4,400,North
+2025-07-06,Monitor,Electronics,150,2,300,South
+2025-07-07,Sofa,Furniture,700,1,700,East
+2025-07-08,Printer,Electronics,120,2,240,West
+2025-07-09,Shelf,Furniture,90,3,270,North
+2025-07-10,Phone,Electronics,500,1,500,East

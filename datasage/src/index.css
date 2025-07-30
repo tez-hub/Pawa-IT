@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DataSage Design System - Professional Analytics Platform */
+
+@layer base {
+  :root {
+    /* Core Theme Colors */
+    --background: 250 100% 99%;
+    --foreground: 230 25% 10%;
+
+    /* Brand Colors */
+    --primary: 235 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 235 84% 70%;
+    --primary-dark: 235 84% 50%;
+
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 10%;
+    --card-hover: 235 20% 98%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 10%;
+
+    /* Secondary Colors */
+    --secondary: 235 20% 96%;
+    --secondary-foreground: 230 25% 15%;
+
+    --muted: 235 15% 95%;
+    --muted-foreground: 230 15% 45%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 280 65% 70%;
+
+    /* State Colors */
+    --success: 145 65% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 90% 55%;
+    --warning-foreground: 230 25% 10%;
+    
+    --destructive: 355 80% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Interface Colors */
+    --border: 235 15% 88%;
+    --input: 235 15% 95%;
+    --ring: 235 84% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(235 84% 60%), hsl(280 65% 60%));
+    --gradient-secondary: linear-gradient(180deg, hsl(235 20% 98%), hsl(235 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(235 84% 60%) 0%, hsl(280 65% 60%) 50%, hsl(320 60% 65%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(230 25% 10% / 0.05);
+    --shadow-md: 0 4px 6px hsl(230 25% 10% / 0.07), 0 2px 4px hsl(230 25% 10% / 0.06);
+    --shadow-lg: 0 10px 15px hsl(230 25% 10% / 0.1), 0 4px 6px hsl(230 25% 10% / 0.05);
+    --shadow-glow: 0 0 30px hsl(235 84% 60% / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core Theme Colors */
+    --background: 230 25% 6%;
+    --foreground: 250 100% 95%;
+
+    /* Brand Colors */
+    --primary: 235 84% 65%;
+    --primary-foreground: 230 25% 6%;
+    --primary-light: 235 84% 75%;
+    --primary-dark: 235 84% 55%;
+
+    /* Surface Colors */
+    --card: 230 25% 8%;
+    --card-foreground: 250 100% 95%;
+    --card-hover: 230 25% 10%;
+
+    --popover: 230 25% 8%;
+    --popover-foreground: 250 100% 95%;
+
+    /* Secondary Colors */
+    --secondary: 230 20% 12%;
+    --secondary-foreground: 250 100% 90%;
+
+    --muted: 230 15% 15%;
+    --muted-foreground: 230 15% 60%;
+
+    --accent: 280 65% 65%;
+    --accent-foreground: 230 25% 6%;
+    --accent-light: 280 65% 75%;
+
+    /* State Colors */
+    --success: 145 65% 55%;
+    --success-foreground: 230 25% 6%;
+    
+    --warning: 45 90% 60%;
+    --warning-foreground: 230 25% 6%;
+    
+    --destructive: 355 80% 65%;
+    --destructive-foreground: 230 25% 6%;
+
+    /* Interface Colors */
+    --border: 230 15% 18%;
+    --input: 230 15% 15%;
+    --ring: 235 84% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(235 84% 65%), hsl(280 65% 65%));
+    --gradient-secondary: linear-gradient(180deg, hsl(230 25% 8%), hsl(230 15% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(235 84% 65%) 0%, hsl(280 65% 65%) 50%, hsl(320 60% 70%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px hsl(0 0% 0% / 0.3), 0 2px 4px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px hsl(0 0% 0% / 0.4), 0 4px 6px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(235 84% 65% / 0.4);
+
+    /* Sidebar */
+    --sidebar-background: 230 25% 6%;
+    --sidebar-foreground: 250 100% 90%;
+    --sidebar-primary: 235 84% 65%;
+    --sidebar-primary-foreground: 230 25% 6%;
+    --sidebar-accent: 230 20% 12%;
+    --sidebar-accent-foreground: 250 100% 90%;
+    --sidebar-border: 230 15% 18%;
+    --sidebar-ring: 235 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  /* DataSage Component Utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+  }
+
+  .data-table {
+    @apply border-collapse border border-border;
+  }
+
+  .data-table th {
+    @apply bg-muted px-4 py-3 text-left font-semibold text-muted-foreground border-b border-border;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 border-b border-border/50;
+  }
+
+  .chat-message {
+    @apply p-4 rounded-lg max-w-3xl;
+  }
+
+  .chat-user {
+    @apply bg-primary text-primary-foreground ml-auto;
+  }
+
+  .chat-ai {
+    @apply bg-card border border-border;
+  }
+
+  .upload-area {
+    @apply border-2 border-dashed border-border rounded-lg p-8 text-center transition-colors;
+  }
+
+  .upload-area:hover {
+    @apply border-primary bg-primary/5;
+  }
+
+  .upload-area.drag-over {
+    @apply border-primary bg-primary/10;
+  }
+}
