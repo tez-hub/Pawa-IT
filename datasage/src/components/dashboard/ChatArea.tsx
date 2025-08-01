@@ -293,7 +293,7 @@ export const ChatArea = ({ selectedFile }: ChatAreaProps) => {
 
     const token = JSON.parse(localStorage.getItem("user") || "{}")?.access_token;
 
-    const response = await fetch("http://localhost:8000/queries/ask", {
+    const response = await fetch("https://pawa-it-backend-two.onrender.com/queries/ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

@@ -18,6 +18,8 @@ interface ChatMessageProps {
 export const ChatMessage = ({ message }: ChatMessageProps) => {
   const isUser = message.type === 'user';
 
+  console.log(message);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -35,8 +37,25 @@ export const ChatMessage = ({ message }: ChatMessageProps) => {
 
       <div className={`flex-1 max-w-3xl ${isUser ? 'text-right' : 'text-left'}`}>
         <div className={`chat-message ${isUser ? 'chat-user' : 'chat-ai'}`}>
-          <p className="text-sm leading-relaxed">{message.content}</p>
+          {/* {!message.chartData && !message.chartType && (
+           <p className="text-sm leading-relaxed">{message.content}</p>
+          )} */}
+
+          {!message.chartData && !message.chartType && (() => {
+            try {
+              const cleaned = message.content
+                .replace(/^```json/, '')
+                .replace(/```$/, '')
+                .trim();
+              const parsed = JSON.parse(cleaned);
+              return <p className="text-sm leading-relaxed">{parsed.summary}</p>;
+            } catch (err) {
+              return <p className="text-sm leading-relaxed">{message.content}</p>;
+            }
+          })()}
+
           
+
           {message.chartData && message.chartType && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

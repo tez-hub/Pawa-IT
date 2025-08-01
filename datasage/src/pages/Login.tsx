@@ -33,7 +33,7 @@ const Login = () => {
   form.append("password", password);
 
   try {
-    const res = await axios.post("http://localhost:8000/users/login", form, {
+    const res = await axios.post("https://pawa-it-backend-two.onrender.com/users/login", form, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },

@@ -73,3 +73,6 @@ npm run dev
 ```
 
 The frontend will be available at: http://localhost:3000
+
+
+The live url is https://langchain-data-analysis.netlify.app

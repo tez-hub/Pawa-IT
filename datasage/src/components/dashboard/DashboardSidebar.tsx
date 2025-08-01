@@ -35,7 +35,7 @@ export const DashboardSidebar = ({ onFileSelect, selectedFile }: DashboardSideba
     console.log("Uploading file with token:", token);
 
     try {
-      const res = await fetch("http://localhost:8000/files/upload", {
+      const res = await fetch("https://pawa-it-backend-two.onrender.com/files/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${JSON.parse(localStorage.getItem("user") || "{}").access_token}`,
